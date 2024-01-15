@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05  - Converter dados</title>
+    <script>
+        // Conversão de dados
+        // 1 Texto para numero inteiro - parseInt();
+        // 2 Texto para numero real - parseFloat();
+        // 3 Numero para texto - toString();
+    //    Obter notas
+    let nota1 = parseFloat(prompt('Informe a primeira nota'));
+    let nota2 = parseFloat(prompt('Informe a segunda nota'));
+
+    // Realizar calculo de media
+    let media = (nota1+nota2)/2;
+
+    // Operador Ternario
+    document.write(media >= 7 ? `Aprovado(a) com a média ${media}` : `Reprovado(a) com a média ${media}`);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
