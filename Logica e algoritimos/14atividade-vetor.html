@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14 - Atividade Vetor</title>
+    <script>
+        //    Vetor
+        let produtos = [];
+
+        // Menu
+        let menu = "1 - Cadastrar produto\n";
+        menu += "2 - Listar produtos\n";
+        menu += "3 - Remover produto\n";
+        menu += "4 - Finalizar";
+
+        // Opção
+        let opcao = 0;
+
+        // Laço de repetição
+        do {
+            // Obter a opção
+            opcao = parseInt(prompt(menu));
+
+            // Ações
+            switch (opcao) {
+                case 1:
+                    produtos.push(prompt('Informe o produto que deseja cadastrar'));
+                    alert('Produto cadastrado com sucesso!');
+                    break;
+                case 2:
+                    let lista = 'PRODUTOS CADASTRADOS\n\n';
+                    for (i = 0; i < produtos.length; i++) {
+                        lista += produtos[i] + '\n';
+                    }
+                    alert(lista);
+                    break;
+                case 3:
+                    let indiceRemocao = -1;
+
+                    let nomeProdutoRemocao = prompt('Informe o nome do produto que deseja remover');
+                    for (let i = 0; i < produtos.length; i++) {
+                        if(nomeProdutoRemocao == produtos[i]){
+                            indiceRemocao = i;
+                        }
+                        if(indiceRemocao != -1){
+                            produtos.splice(indiceRemocao, 1);
+                            alert('Produto removido com sucesso');
+                        }else{
+                            alert('Produto não encontrado')
+                        }
+                    }
+                    break;
+                case 4:
+                    alert('Sistema Finalizado');
+                    break;
+
+                default:
+                    alert('Opção invalida!');
+            }
+
+        } while (opcao != 4);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
